@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 15px;
+}
+
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  color: #000;
+  padding: 15px;
+  margin-top: 7px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 300px;
+  left: 0;
+}
+
+.menu li:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content h2 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.dropdown-content p {
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.dropdown-content hr {
+  margin: 10px 0;
+}
+
+.dropdown-content img {
+  width: 50%;
+  height: auto;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-container img {
+  border: 2px solid #dddddd;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-caption {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .header {
+    background-color: #4CAF50;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .header {
+    background-color: #2196F3;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    background-color: #FFC107;
+  }
+  .header h1 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .header {
+    background-color: #FF5722;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1 style="text-align: center;">Worksheet 2.1 | Prof Elective 1(2024)</h1>
+</div>
+
+<div class="row">
+    <div class="col-3 menu">
+      <ul>
+        <li>Viewport
+          <div class="dropdown-content">
+            <h2>What is The Viewport?</h2>
+            <p>The viewport is the user's visible area of a web page.</p>
+            <p>The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.</p>
+            <p>Before tablets and mobile phones, web pages were designed only for computer screens, and it was common for
+              web pages to have a static design and a fixed size.</p>
+            <p>Then, when we started surfing the internet using tablets and mobile phones, fixed 
+            size web pages were too large to fit the viewport.
+            To fix this, browsers on those devices scaled down the entire web page to fit the screen.</p>
+            <p>This was not perfect!! But a quick fix.</p>
+            <hr>
+          </div>
+        </li>
+        <li>Grid View
+          <div class="dropdown-content">
+            <h2>What is a Grid-View?</h2>
+            <p>Many web pages are based on a grid-view, which means that the page is divided into columns:</p>
+            <p>Using a grid-view is very helpful when designing web pages. It makes it easier to place elements on the page.</p> <hr>
+          </div>
+        </li>
+        <li>Media Queries
+          <div class="dropdown-content">
+            <h2>What is a Media Query?</h2>
+            <p>Media query is a CSS technique introduced in CSS3.</p>
+            <p>It uses the <code>@media</code> rule to include a block of CSS properties only if a 
+            certain condition is true.</p> <hr>
+          </div>
+        </li>
+        <li>Images
+          <div class="dropdown-content">
+            <img src="img_chania.jpg" alt="Responsive Image">
+            <p>Resize the browser window to see how the image scales to fit the page.</p> <hr>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  <div class="col-6">
+    <h1>Responsive Layout</h1>
+    <p>The intended output of this worksheet will be discussed on the 6th week of the semester.</p>
+    <h3>What is Responsive Web Design?</h3>
+    <p>Web pages should not leave out information to fit smaller devices, but rather adapt its content to fit any device:</p>
+
+    <div class="image-container">
+      <div>
+        <img src="rwd_desktop.png" alt="Desktop">
+        <div class="image-caption">Desktop</div>
+      </div>
+      <div>
+        <img src="rwd_tablet.png" alt="Tablet">
+        <div class="image-caption">Tablet</div>
+      </div>
+      <div>
+        <img src="rwd_phone.png" alt="Phone">
+        <div class="image-caption">Phone</div>
+      </div>
+    </div>
+
+    <p>It is called responsive web design when you use CSS and HTML to resize, hide, shrink, enlarge, or move the content to make it look good on any screen.</p>
+    <h3 >What is Responsive Web Design?</h3>
+    <p>1. Responsive web design makes your web page look good on all devices.<br />
+      2. Responsive web design uses only HTML and CSS.<br />
+      3. Responsive web design is not a program or a JavaScript.
+    </p>
+    <h5 style="margin-bottom: 0;">Note:</h5>
+    <p style="margin-top: 0;">
+        It is called responsive web design when you use CSS and HTML to resize, hide, shrink, enlarge, or move the content to make it look good on any screen.
+    </p>    
+  </div>
+
+  <div class="col-3 right">
+    <div class="aside">
+      <h2>What?</h2>
+      <p>This worksheet uses pure HTML and CSS</p>
+      <h2>Where?</h2>
+      <p>This worksheet is to be uploaded in our Google Classroom Prof Elective 1(2024)</p>
+      <h2>How?</h2>
+      <p>Place your html, css and image in a folder named: lastname_ws2-1.zip</p>
+    </div>
+  </div>
+</div>
+
+
+<div style="text-align:center;">
+    <p>Resize the browser window to see how the image scales to fit the page:</p>
+    <img src="img_chania.jpg" style="width:50%;height:auto;">
+    </div>
+    <div style="background: url('img_flowers.jpg') no-repeat center center; background-size: cover; width: 100%; height: 300px; margin-top: 10px;"></div>
+    <div style="margin-top: 15px;" class="footer">
+      <p>&copy; DeejayPiaoan circa 2024 | <a href="#"> Privacy Policy </a> | <a href="#"> Terms of Service </a></p>
+    </div>
+    
+
+</body>
+</html>
